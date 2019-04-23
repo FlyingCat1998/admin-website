@@ -18,4 +18,8 @@ router.get('/thong-tin-ca-nhan.hbs', function(req, res, next) {
   res.render('thong-tin-ca-nhan', { title: 'DoubleT | Thông tin cá nhân' });
 });
 
+router.get('/danh-sach-san-pham.hbs', function(req, res, next) {
+  res.render('danh-sach-san-pham', { title: 'DoubleT | Quản lý sản phẩm' });
+});
+
 module.exports = router;
