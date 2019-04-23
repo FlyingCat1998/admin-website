@@ -1,0 +1,65 @@
+/****************************************************************
+
+Top Navigation
+
+*****************************************************************/
+
+.page-header.navbar {background:#000;}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle>i {
+    color: #79869a;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown .dropdown-toggle .badge.badge-default {
+    background-color: transparent;
+    color: #fff;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-language>.dropdown-toggle>.langname, .page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>.username, .page-header.navbar .top-menu .navbar-nav>li.dropdown-user>.dropdown-toggle>i {
+    color: #c6cfda;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-extended .dropdown-menu>li.external {
+    background: #36c6d3;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-extended .dropdown-menu>li.external>h3, .navbar-nav>li.dropdown-extended .dropdown-menu>li.external>a {
+    color: #fff;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-extended .dropdown-menu {
+    border-color: #fff;
+	    border: 0px solid rgba(0,0,0,.15);
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-extended .dropdown-menu .dropdown-menu-list>li>a {
+    border-bottom: 1px solid #EFF2F6!important;
+    color: #888;
+}
+.page-header.navbar .top-menu .navbar-nav>li.dropdown-extended .dropdown-menu .dropdown-menu-list>li>a:hover {
+    background: #f8f9fa;
+}
+.sidebar-nav ul a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a {
+    border-top: 1px solid #3d4957;
+    color: #b4bcc8;
+}
+.sidebar li .label {
+    background-color: #03a9f4;
+	margin-right:5px;
+	    line-height: 19px;
+}
+.label-purple {
+    background-color: #6a67fc;
+}
+.label-inverse {
+    background-color: #666;
+}
+.progress .determinate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #03a9f4;
+    transition: width .3s linear;
+}
+.metismenu .arrow {
+    float: right;
+    line-height: 26px;
+}
+.m-r-10
+{
+	margin-right:10px;
+}
