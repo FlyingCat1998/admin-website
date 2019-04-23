@@ -14,4 +14,8 @@ router.get('/danh-sach-nguoi-dung.hbs', function(req, res, next) {
   res.render('danh-sach-nguoi-dung', { title: 'DoubleT | Danh sách người dùng' });
 });
 
+router.get('/thong-tin-ca-nhan.hbs', function(req, res, next) {
+  res.render('thong-tin-ca-nhan', { title: 'DoubleT | Thông tin cá nhân' });
+});
+
 module.exports = router;
