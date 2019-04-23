@@ -26,4 +26,12 @@ router.get('/danh-sach-don-dat-hang.hbs', function(req, res, next) {
   res.render('danh-sach-don-dat-hang', { title: 'DoubleT | Quản lý đơn đặt hàng' });
 });
 
+router.get('/thong-ke-doanh-so.hbs', function(req, res, next) {
+  res.render('thong-ke-doanh-so', { title: 'DoubleT | Thống kê doanh số' });
+});
+
+router.get('/thong-ke-top-10.hbs', function(req, res, next) {
+  res.render('thong-ke-top-10', { title: 'DoubleT | Thống kê theo top 10' });
+});
+
 module.exports = router;
