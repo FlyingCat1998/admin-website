@@ -22,4 +22,8 @@ router.get('/danh-sach-san-pham.hbs', function(req, res, next) {
   res.render('danh-sach-san-pham', { title: 'DoubleT | Quản lý sản phẩm' });
 });
 
+router.get('/danh-sach-don-dat-hang.hbs', function(req, res, next) {
+  res.render('danh-sach-don-dat-hang', { title: 'DoubleT | Quản lý đơn đặt hàng' });
+});
+
 module.exports = router;
