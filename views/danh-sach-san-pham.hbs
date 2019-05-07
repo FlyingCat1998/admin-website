@@ -7,13 +7,10 @@
 
                     <h4 class="float-left">Danh sách sản phẩm</h4>
 
-
                     <ol class="breadcrumb float-left float-md-right">
                         <li class="breadcrumb-item"><a href="javascript: void(0);"><i class="fa fa-home"></i></a></li>
                         <li class="breadcrumb-item">danh-sach-san-pham</li>
                     </ol>
-
-
                 </div>
             </div>
         </div><!-- end .page title-->
@@ -66,12 +63,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-end margin-bottom-10">
+                    <a href="them-san-pham.hbs">
+                        <button  type="button" id="add-product" class="btn btn-success float-right"><i class="fa fa-plus"></i> Thêm sản phẩm</button>
+                    </a>
+                </div>
                 <form  method="post" enctype="multipart/form-data" id="form-product" class="">
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <td  class="text-center"><input type="checkbox" onClick="$('input[name*=\'selected\']').prop('checked', this.checked);"></td>
+                                <td class="text-center"><input type="checkbox" onClick="$('input[name*=\'selected\']').prop('checked', this.checked);"></td>
                                 <td class="text-center">Ảnh minh hoạ</td>
                                 <td class="text-left"><a href="#" class="asc">Tên sản phẩm</a></td>
                                 <td class="text-left"><a href="#">Thể loại</a></td>
@@ -96,7 +98,7 @@
                                 </td>
                                 <td class="text-left"><span class="tag label-info">Đang bán</span></td>
                                 <td class="text-right">
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="chinh-sua-san-pham.hbs" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
                                     <a href="#" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
@@ -117,7 +119,7 @@
                                 </td>
                                 <td class="text-left"><span class="tag label-info">Đang bán</span></td>
                                 <td class="text-right">
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="chinh-sua-san-pham.hbs" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
                                     <a href="#" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
@@ -136,8 +138,8 @@
                                 </td>
                                 <td class="text-left"><span class="tag label-purple">Ngừng bán</span></td>
                                 <td class="text-right">
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
+                                    <a href="chinh-sua-san-pham.hbs" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             <tr>
@@ -152,7 +154,7 @@
                                 </td>
                                 <td class="text-left"><span class="tag label-info">Đang bán</span></td>
                                 <td class="text-right">
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="chinh-sua-san-pham.hbs" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
                                     <a href="#" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
@@ -168,7 +170,7 @@
                                 </td>
                                 <td class="text-left"><span class="tag label-danger">Hết hàng</span></td>
                                 <td class="text-right">
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="chinh-sua-san-pham.hbs" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
                                     <a href="#" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
@@ -187,7 +189,7 @@
                                 </td>
                                 <td class="text-left"><span class="tag label-purple">Ngừng bán</span></td>
                                 <td class="text-right">
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+                                    <a href="chinh-sua-san-pham.hbs" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
                                     <a href="#" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>

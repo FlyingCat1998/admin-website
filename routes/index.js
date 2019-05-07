@@ -22,6 +22,14 @@ router.get('/danh-sach-san-pham.hbs', function(req, res, next) {
   res.render('danh-sach-san-pham', { title: 'DoubleT | Quản lý sản phẩm' });
 });
 
+router.get('/them-san-pham.hbs', function(req, res, next) {
+    res.render('them-san-pham', { title: 'DoubleT | Thêm sản phẩm' });
+});
+
+router.get('/chinh-sua-san-pham.hbs', function(req, res, next) {
+  res.render('chinh-sua-san-pham', { title: 'DoubleT | Chỉnh sửa sản phẩm' });
+});
+
 router.get('/danh-sach-don-dat-hang.hbs', function(req, res, next) {
   res.render('danh-sach-don-dat-hang', { title: 'DoubleT | Quản lý đơn đặt hàng' });
 });
