@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 // var donHangRouter = require('./routes/donhang');
-// var gameRouter = require('./routes/game');
+var gameRouter = require('./routes/game');
 // var nguoiDungRouter = require('./routes/nguoidung');
 // var theLoaiRouter = require('./routes/theloai');
 
@@ -26,13 +26,28 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use('/donhang', donHangRouter);
-// app.use('/game', gameRouter);
+app.use('/game', gameRouter);
 // app.use('/nguoidung', nguoiDungRouter);
 // app.use('/theloai', theLoaiRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use(function(req, res, next){
+  res.status(404);
+
+  // respond with html page
+  if (req.accepts('hbs')) {
+    res.render('404', { layout: '404' });
+    return;
+  }
+
+  // respond with json
+  if (req.accepts('json')) {
+    res.send({ error: 'Not found' });
+    return;
+  }
+
+  // default to plain-text. send()
+  res.type('txt').send('Not found');
 });
 
 // error handler
