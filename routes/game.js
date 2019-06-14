@@ -12,6 +12,7 @@ router.get('/chinh_sua_san_pham', game_controller.chinh_sua_san_pham);
 // POST
 
 router.get('/them_san_pham', game_controller.them_san_pham);
+router.post('/them_san_pham', game_controller.them_san_pham_post);
 // POST to creat Game
 // // GET request for creating 1 Game. NOTE This must come before routes that display Game (uses id).
 // router.get('/create', game_controller.game_create_get);

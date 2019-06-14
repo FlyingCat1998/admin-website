@@ -33,14 +33,15 @@
         <div class="account-col text-center">
             <h1>Double T</h1>
             <h3>Đăng nhập vào tài khoản</h3>
-            <form class="m-t" role="form" action="trang-chu">
+            <form class="m-t" role="form" action="dang-nhap" method="post">
                 <div class="form-group row">
-                    <input title="Hãy điền tên đăng nhập của bạn" type="text" class="form-control" placeholder="Tên đăng nhập" required=""
+                    <input name="username" type="text" class="form-control" placeholder="Tên đăng nhập" required=""
+                           title="Hãy điền tên đăng nhập của bạn"
                            oninvalid="this.setCustomValidity('Vui lòng điền tên đăng nhập của bạn')"
                            oninput="setCustomValidity('')">
                 </div>
                 <div class="form-group row">
-                    <input title="Hãy điền mật khẩu của bạn" type="password" class="form-control" placeholder="Mật khẩu" required=""
+                    <input name="password" type="password" class="form-control" placeholder="Mật khẩu" required="" title="Hãy điền mật khẩu của bạn"
                            oninvalid="this.setCustomValidity('Vui lòng điền mật khẩu của bạn')"
                            oninput="setCustomValidity('')">
                 </div>

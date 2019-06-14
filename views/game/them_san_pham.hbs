@@ -16,76 +16,87 @@
             </div>
         </div><!-- end .page title-->
 
-        <div class="row justify-content-center">
-            <div class="col-md-5 margin-b-10 ">
-                <div class="profile-overview">
-                    <div class="avtar text-center">
+        <form class="form-horizontal" method="post" action="them_san_pham">
+            <div class="row justify-content-center">
+                <div class="col-md-5 margin-b-10 ">
+                    <div class="profile-overview">
+                        <div class="avtar text-center">
 
-                        <div id="fileZone" class="dropzone hasImportTools dz-clickable">
-                            <div class="dz-message">
-                                <div class="note text-white">space</div>
-                                <div class="note">Thêm một hình nhỏ về game</div>
-                                <button class="btn btn-white">Chọn tệp</button>
+                            <div id="fileZone" class="dropzone hasImportTools dz-clickable">
+                                <div class="dz-message">
+                                    <div class="note text-white">space</div>
+                                    <div class="note">Thêm một hình nhỏ về game</div>
+                                    <!--                                <button class="btn btn-white">Chọn tệp</button>-->
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="Url" name="Url">
+                                    </div>
+                                </div>
+                                <div class="importTools">
+
+
+                                </div>
                             </div>
-                            <div class="importTools">
-
-
-                            </div>
+                            <hr>
                         </div>
-                        <hr>
+                        <div>
+                            <h4 class="mb-xlg">Một số hình minh hoạ về game</h4>
+                            <fieldset>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label">Hình 1</label>
+                                    <div class="col-md-8">
+                                        <!--                                    <button clas s="btn btn-white">Chọn tệp</button>-->
+                                        <input type="text" class="form-control" id="Url1" name="Url1">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label">Hình 2</label>
+                                    <div class="col-md-8">
+                                        <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
+                                        <input type="text" class="form-control" id="Url2" name="Url2">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label">Hình 3</label>
+                                    <div class="col-md-8">
+                                        <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
+                                        <input type="text" class="form-control" id="Url3" name="Url3">
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
                     </div>
-                    <form class="form-horizontal" method="get">
-                        <h4 class="mb-xlg">Một số hình minh hoạ về game</h4>
-                        <fieldset>
-                            <div class="form-group row">
-                                <label class="col-md-3 form-control-label">Hình 1</label>
-                                <div class="col-md-8">
-                                    <button class="btn btn-white">Chọn tệp</button>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 form-control-label">Hình 2</label>
-                                <div class="col-md-8">
-                                    <button class="btn btn-white">Chọn tệp</button>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 form-control-label">Hình 3</label>
-                                <div class="col-md-8">
-                                    <button class="btn btn-white">Chọn tệp</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
                 </div>
-            </div>
-            <div class="col-md-6 margin-b-10">
-                <div class="profile-edit">
-                    <form class="form-horizontal" method="get">
+                <div class="col-md-6 margin-b-10">
+                    <div class="profile-edit">
+
                         <h4 class="mb-xlg">Thông tin chung về sản phẩm</h4>
                         <fieldset>
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Name">Tên game</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Name">
+                                    <input type="text" class="form-control" id="Name" name="Name">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Genre">Thể loại</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Genre">
+                                    <select id="Genre" name="Genre" class="form-control">
+                                        {{#each category }}
+                                            <option value="{{this.id}}" {{#selected}}selected="selected"{{/selected}}>{{this.name}}</option>
+                                        {{/each}}
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Developer">Nhà phát triển</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Developer">
+                                    <input type="text" class="form-control" id="Developer" name="Developer">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Publisher">Nhà phát hành</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Publisher">
+                                    <input type="text" class="form-control" id="Publisher" name="Publisher">
                                 </div>
                             </div>
                         </fieldset>
@@ -95,13 +106,13 @@
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Price">Giá cả</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Price">
+                                    <input type="text" class="form-control" id="Price" name="Price">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Quantity">Số lượng</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Quantity">
+                                    <input type="text" class="form-control" id="Quantity" name="Quantity">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -143,9 +154,9 @@
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-md-3 form-control-label" for="MoreInformation">Mô tả về game</label>
+                                <label class="col-md-3 form-control-label" for="Description">Mô tả về game</label>
                                 <div class="col-md-8">
-                                    <textarea class="form-control" rows="4" id="MoreInformation"></textarea>
+                                    <textarea id="Description" name="Description" class="form-control" rows="4"></textarea>
                                 </div>
                             </div>
                         </fieldset>
@@ -158,10 +169,9 @@
                                 </div>
                             </div>
                         </div>
-
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
     <!-- END CONTENT BODY -->

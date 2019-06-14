@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,6 +30,13 @@ app.use('/users', usersRouter);
 app.use('/game', gameRouter);
 // app.use('/nguoidung', nguoiDungRouter);
 // app.use('/theloai', theLoaiRouter);
+
+app.use(session({
+  cookie: { maxAge: 60000 },
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next){

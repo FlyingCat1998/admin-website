@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-
 var nguoi_dung_controller = require('../controllers/nguoidungController');
 
 /// NGUOI DUNG ROUTES ///

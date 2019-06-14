@@ -1,27 +1,60 @@
 var express = require('express');
 var router = express.Router();
+var bodyParser = require("body-parser");
+var nguoidung = require('../models/nguoidung');
 
 /* GET home page. */
-
-// Chuẩn bị MVC để thay route sau
-// router.get('/', function(req, res) {
-//   res.redirect('/catalog');
-// });
+router.use(bodyParser.json()); // support json encoded bodies
+router.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 router.get('/', function(req, res, next) {
-  res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
-});
-
-router.get('/trang-chu', function(req, res, next) {
-  res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
+  res.render('dang-nhap', { layout: 'dang-nhap', title: 'DoubleT | Đăng nhập' });
 });
 
 router.get('/dang-nhap', function(req, res, next) {
   res.render('dang-nhap', { layout: 'dang-nhap', title: 'DoubleT | Đăng nhập' });
 });
 
+// router.post('/trang-chu', nguoidung.login);
+
+// router.post('/trang-chu', function(req, res){
+//   nguoidung.login();
+// });
+
+router.post('/dang-nhap',function(req, res, next){
+  // const username = req.body.username;
+  // const password = req.body.password;
+  // let isAuthenticated = false;
+  //
+  // len = nguoidung.admin_account_list.length;
+  //
+  // for (let i = 0; i < len; i++) {
+  //   if (nguoidung.admin_account_list[i].username == username)
+  //   {
+  //     if (nguoidung.admin_account_list[i].password == password)
+  //     {
+  //       isAuthenticated = true;
+  //     }
+  //   }
+  // }
+  //
+  // if (isAuthenticated)
+  // {
+  //   res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
+  // }
+  // else
+  // {
+  //   res.redirect('/');
+  // }
+  res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
+});
+
 router.get('/dang-ki', function(req, res, next) {
   res.render('dang-ki', { layout: 'dang-ki', title: 'DoubleT | Đăng kí' });
+});
+
+router.get('/trang-chu', function(req, res, next) {
+  res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
 });
 
 router.get('/danh-sach-nguoi-dung', function(req, res, next) {

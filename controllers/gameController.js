@@ -1,23 +1,29 @@
-const Games = require('../models/game');
+let Games = require('../models/game');
 
 exports.danh_sach_san_pham = async (req, res, next) => {
-    const games = await Games.list;
+    let games = await Games.list;
 
     res.render('game/danh_sach_san_pham', { title: 'Danh sách sản phẩm', games });
 };
 
 exports.chinh_sua_san_pham = async (req, res, next) => {
-    const games = await Games.list;
+    let games = await Games.list;
 
     res.render('game/chinh_sua_san_pham', { title: 'Chỉnh sửa sản phẩm', games });
 };
 
 exports.them_san_pham = async (req, res, next) => {
-    const games = await Games.list;
+    let category = await Games.CategoryList;
 
-    res.render('game/them_san_pham', { title: 'Thêm sản phẩm', games });
+    res.render('game/them_san_pham', { title: 'Thêm sản phẩm', category });
 };
 
+exports.them_san_pham_post = async (req, res, next) => {
+    await Games.add(req.body);
+    // console.log(req.body);
+
+    res.redirect('./danh_sach_san_pham');
+};
 
 // exports.game_create = function(req, res) {
 //     res.send('NOT IMPLEMENTED: Game create');
