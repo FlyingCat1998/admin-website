@@ -5,162 +5,180 @@
             <div class="col-sm-12">
                 <div class="page-title">
 
-                    <h4 class="float-left">Chỉnh sửa thông tin sản phẩm </h4>
+                    <h4 class="float-left">Chỉnh sửa sản phẩm </h4>
 
                     <ol class="breadcrumb float-left float-md-right">
                         <li class="breadcrumb-item"><a href="javascript: void(0);"><i class="fa fa-home"></i></a></li>
-                        <li class="breadcrumb-item">chinh-sua-san-pham  </li>
+                        <li class="breadcrumb-item">game / chinh-sua-san-pham / </li>
                     </ol>
 
                 </div>
             </div>
         </div><!-- end .page title-->
 
-        <div class="row justify-content-center">
-            <div class="col-md-5 margin-b-10 ">
-                <div class="profile-overview">
-                    <div class="avtar text-center">
-                        <img src="/images/product_4.jpg" alt="" class="img-thumbnail">
+        <form class="form-horizontal" method="post" action="">
+            {{#each result}}
+                <div class="row justify-content-center">
+                    <div class="col-md-5 margin-b-10 ">
+                        <div class="profile-overview">
+                            <div class="avtar text-center">
+
+                                <div id="fileZone" class="dropzone hasImportTools dz-clickable">
+                                    <div class="dz-message">
+                                        <div class="note text-white">space</div>
+                                        <div class="note">Thêm một hình nhỏ về game</div>
+                                        <!--                                <button class="btn btn-white">Chọn tệp</button>-->
+                                        <div class="col-md-8">
+                                            <input type="text" class="form-control" id="Url" name="Url" value="{{this.avatar}}">
+                                        </div>
+                                    </div>
+                                    <div class="importTools">
+
+
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <div>
+                                <h4 class="mb-xlg">Một số hình minh hoạ về game</h4>
+                                <fieldset>
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label">Hình 1</label>
+                                        <div class="col-md-8">
+                                            <!--                                    <button clas s="btn btn-white">Chọn tệp</button>-->
+                                            <input type="text" class="form-control" id="Url1" name="Url1" value="{{this.imgurl1}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label">Hình 2</label>
+                                        <div class="col-md-8">
+                                            <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
+                                            <input type="text" class="form-control" id="Url2" name="Url2" value="{{this.imgurl2}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-3 form-control-label">Hình 3</label>
+                                        <div class="col-md-8">
+                                            <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
+                                            <input type="text" class="form-control" id="Url3" name="Url3" value="{{this.imgurl3}}">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
                     </div>
-                    <form class="form-horizontal" method="get">
-                        <h4 class="mb-xlg">Một số hình minh hoạ về game</h4>
-                        <fieldset>
-                            <div class="form-group row">
-                                <label class="col-md-3 form-control-label">Hình 1</label>
-                                <div class="col-md-8">
-                                    <button class="btn btn-white">Chọn tệp</button>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 form-control-label">Hình 2</label>
-                                <div class="col-md-8">
-                                    <button class="btn btn-white">Chọn tệp</button>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 form-control-label">Hình 3</label>
-                                <div class="col-md-8">
-                                    <button class="btn btn-white">Chọn tệp</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-6 margin-b-10">
-                <table class="table profile-detail table-sm table-hover">
-                    <thead>
-                    <tr>
-                        <th colspan="3">Thông tin chung về sản phẩm</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Tên game</td>
-                        <td>
-                            <a href="#">
-                                Sekiro: Shadows die twice
-                            </a></td>
-                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Thể loại</td>
-                        <td>Action-adventure game</td>
-                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Nhà phát triển</td>
-                        <td>
-                            <a href="#">
-                                FromSoftware
-                            </a></td>
-                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Nhà phát hành</td>
-                        <td>
-                            <a href="#">
-                                Activision
-                            </a></td>
-                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table class="table profile-detail table-sm table-hover">
-                    <thead>
-                    <tr>
-                        <th colspan="3">Thông tin chi tiết về sản phẩm</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Giá cả</td>
-                        <td>
-                            <a href="#">
-                                1,190,000đ
-                            </a></td>
-                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Số lượng</td>
-                        <td>53</td>
-                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                    </tr>
-                    <tr>
-                        <td>Tình trạng</td>
-                        <td>
-                            <div class="col-md-12">
-                                <div class="row justify-content-between funkyradio">
-                                    <div class="funkyradio-default">
-                                        <input type="checkbox" name="checkbox" id="checkbox1" checked/>
-                                        <label for="checkbox1">Chưa nhập </label>
-                                    </div>
-                                    <div class="funkyradio-primary">
-                                        <input type="checkbox" name="checkbox" id="checkbox2" checked/>
-                                        <label for="checkbox2">Sắp có </label>
-                                    </div>
-                                    <div class="funkyradio-success">
-                                        <input type="checkbox" name="checkbox" id="checkbox3" checked/>
-                                        <label for="checkbox3">Đang bán </label>
-                                    </div>
-                                    <div class="funkyradio-purple">
-                                        <input type="checkbox" name="checkbox" id="checkbox4" checked/>
-                                        <label for="checkbox4">Ngừng bán </label>
+                    <div class="col-md-6 margin-b-10">
+                        <div class="profile-edit">
+
+                            <h4 class="mb-xlg">Thông tin chung về sản phẩm</h4>
+                            <fieldset>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Name">Tên game</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="Name" name="Name" value="{{this.name}}">
                                     </div>
                                 </div>
-                                <div class="row justify-content-around funkyradio">
-                                    <div class="funkyradio-danger">
-                                        <input type="checkbox" name="checkbox" id="checkbox5" checked/>
-                                        <label for="checkbox5">Hết hàng </label>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Genre">Thể loại</label>
+                                    <div class="col-md-8">
+                                        <select id="Genre" name="Genre" class="form-control">
+                                            {{/each}}
+
+                                            {{#if category}}
+                                                {{#each category }}
+                                                    <option value="{{this.id}}" {{#selected}}selected="selected"{{/selected}}>{{this.name}}</option>
+                                                {{/each}}
+                                            {{/if}}
+
+                                            {{#each result}}
+                                        </select>
                                     </div>
-                                    <div class="funkyradio-warning">
-                                        <input type="checkbox" name="checkbox" id="checkbox6" checked/>
-                                        <label for="checkbox6">Limited </label>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Developer">Nhà phát triển</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="Developer" name="Developer" value="{{this.developer}}">
                                     </div>
-                                    <div class="row funkyradio-info">
-                                        <input type="checkbox" name="checkbox" id="checkbox7" checked/>
-                                        <label for="checkbox7">Khuyến mãi </label>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Publisher">Nhà phát hành</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="Publisher" name="Publisher" value="{{this.publisher}}">
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <hr class="dotted tall">
+                            <h4 class="mb-xlg">Thông tin chi tiết</h4>
+                            <fieldset>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Price">Giá cả</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="Price" name="Price" value="{{this.price}}">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Quantity">Số lượng</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="Quantity" name="Quantity" value="{{this.quantity}}">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Status">Tình trạng</label>
+                                    <div class="col-md-12">
+                                        <div class="row justify-content-between funkyradio">
+                                            <div class="funkyradio-default">
+                                                <input type="checkbox" name="checkbox" id="checkbox1" checked/>
+                                                <label for="checkbox1">Chưa nhập </label>
+                                            </div>
+                                            <div class="funkyradio-primary">
+                                                <input type="checkbox" name="checkbox" id="checkbox2" checked/>
+                                                <label for="checkbox2">Sắp có </label>
+                                            </div>
+                                            <div class="funkyradio-success">
+                                                <input type="checkbox" name="checkbox" id="checkbox3" checked/>
+                                                <label for="checkbox3">Đang bán </label>
+                                            </div>
+                                            <div class="funkyradio-purple">
+                                                <input type="checkbox" name="checkbox" id="checkbox4" checked/>
+                                                <label for="checkbox4">Ngừng bán </label>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-around funkyradio">
+                                            <div class="funkyradio-danger">
+                                                <input type="checkbox" name="checkbox" id="checkbox5" checked/>
+                                                <label for="checkbox5">Hết hàng </label>
+                                            </div>
+                                            <div class="funkyradio-warning">
+                                                <input type="checkbox" name="checkbox" id="checkbox6" checked/>
+                                                <label for="checkbox6">Limited </label>
+                                            </div>
+                                            <div class="row funkyradio-info">
+                                                <input type="checkbox" name="checkbox" id="checkbox7" checked/>
+                                                <label for="checkbox7">Khuyến mãi </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="Description">Mô tả về game</label>
+                                    <div class="col-md-12">
+                                        <textarea id="Description" name="Description" class="form-control" rows="4" >{{this.description}}</textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="panel-footer">
+                                <div class="row justify-content-end">
+                                    <div class="col-md-5 col-md-offset-3">
+                                        <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
                                     </div>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Mô tả</td>
-                        <td>
-                            Sekiro: Shadows Die Twice is an action-adventure game played from a third-person view..</td>
-                        <td><a href="#panel_edit_account" class="show-tab"><i class="fa fa-pencil edit-user-info"></i></a></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="panel-footer margin-bottom-10">
-                    <div class="row justify-content-end">
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            {{/each}}
+        </form>
     </div>
     <!-- END CONTENT BODY -->
