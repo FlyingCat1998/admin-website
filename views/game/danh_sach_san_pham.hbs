@@ -88,8 +88,8 @@
                             {{#each games}}
                             <tr>
                                 <td class="text-center"><input type="checkbox" name="selected[]" value="42"></td>
-                                <td class="text-center"><img src={{this.avatar}} alt="Games&quot;" class="img-thumbnail w3h4"></td>
-                                <td class="text-left">{{this.name}}</td>
+                                <td class="text-center"><a href="chinh_sua_san_pham/{{this.pid}}"><img src={{this.avatar}} alt="Games&quot;" class="img-thumbnail w3h4"></td>
+                                <td class="text-left"><a href="chinh_sua_san_pham/{{this.pid}}">{{this.name}}</td>
                                 <td class="text-left">Action-adventure game</td>
                                 <td class="text-left"><span class=" line-through">{{this.price}}</span><br>
                                     <div class="text-danger">700,000 đồng</div>
@@ -99,7 +99,7 @@
                                 <td class="text-left"><span class="tag label-info">Đang bán</span></td>
                                 <td class="text-right">
                                     <a href="chinh_sua_san_pham/{{this.pid}}" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
+                                    <a href="xoa_san_pham/{{this.pid}}" onclick="return confirm('Bạn có chắc là muốn xoá game này?')" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Xoá"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             {{/each}}

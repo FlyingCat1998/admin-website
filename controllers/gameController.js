@@ -20,11 +20,20 @@ exports.them_san_pham_post = async (req, res, next) => {
 };
 
 exports.chinh_sua_san_pham = async (req, res, next) => {
-    let category = await Games.CategoryList;
+    let categories = await Games.CategoryList;
 
     await Games.find(req.params.id, function(result) {
-        console.log(result);
-        res.render('game/chinh_sua_san_pham', { title: 'Chỉnh sửa sản phẩm', result, category});
+        let selectedCategory = "";
+
+        for (let i = 0; i <  Games.CategoryList.length; i++)
+        {
+            if ( categories[i].id == result[0].cid)
+            {
+                selectedCategory = categories[i].name;
+            }
+        }
+
+        res.render('game/chinh_sua_san_pham', { title: 'Chỉnh sửa sản phẩm', result, categories, selectedCategory});
     });
 };
 
@@ -32,6 +41,12 @@ exports.chinh_sua_san_pham_post = async (req, res, next) => {
     await Games.update(req.params.id, req.body);
 
     // thong bao cap nhat thanh cong
+    res.redirect('/game/danh_sach_san_pham');
+};
+
+exports.xoa_san_pham = async (req, res, next) => {
+    await Games.delete(req.params.id);
+
     res.redirect('/game/danh_sach_san_pham');
 };
 // exports.game_create = function(req, res) {

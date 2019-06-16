@@ -7,13 +7,16 @@ var game_controller = require('../controllers/gameController');
 // GET request for list of all Game.
 router.get('/danh_sach_san_pham', game_controller.danh_sach_san_pham);
 
-// GET request to create Game.
+// GET,POST request to create Game.
 router.get('/them_san_pham/', game_controller.them_san_pham);
 router.post('/them_san_pham', game_controller.them_san_pham_post);
 
-// GET request to update Game.
+// GET,POST request to update Game.
 router.get('/chinh_sua_san_pham/(:id)', game_controller.chinh_sua_san_pham);
 router.post('/chinh_sua_san_pham/(:id)', game_controller.chinh_sua_san_pham_post);
+
+// GET request to delete Game
+router.get('/xoa_san_pham/(:id)', game_controller.xoa_san_pham);
 // // GET request for creating 1 Game. NOTE This must come before routes that display Game (uses id).
 // router.get('/create', game_controller.game_create_get);
 //

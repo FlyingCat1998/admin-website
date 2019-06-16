@@ -36,9 +36,15 @@ module.exports.find = function (id,callback){
 module.exports.update = async (id, game) => {
     const sql = "UPDATE PRODUCT SET name = '" + game.Name + "', cid = " + game.Genre + ", avatar = '" + game.Url + "', imgurl1 = '" + game.Url1 +
         "', imgurl2 = '" + game.Url2 + "', imgurl3 = '" + game.Url3 + "', price = " + game.Price + ", quantity = " + game.Quantity +
-        ", publisher = '" + game.Publisher + "', developer = '" + game.Developer + "', description = '" + game.Description + "'WHERE pid = " + id;
+        ", publisher = '" + game.Publisher + "', developer = '" + game.Developer + "', description = '" + game.Description + "' WHERE pid = " + id;
 
-    console.log(sql);
+    return await connection.query(sql, function (err, result) {
+        if (err) throw err;
+    });
+};
+
+module.exports.delete = async (id) => {
+    const sql = "DELETE FROM PRODUCT WHERE pid =" + id;
 
     return await connection.query(sql, function (err, result) {
         if (err) throw err;

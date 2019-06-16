@@ -82,11 +82,12 @@
                                     <label class="col-md-3 form-control-label" for="Genre">Thể loại</label>
                                     <div class="col-md-8">
                                         <select id="Genre" name="Genre" class="form-control">
-                                            {{/each}}
 
-                                            {{#if category}}
-                                                {{#each category }}
-                                                    <option value="{{this.id}}" {{#selected}}selected="selected"{{/selected}}>{{this.name}}</option>
+
+                                            <option value="{{this.cid}}" hidden="hidden" selected="selected">{{/each}}{{selectedCategory}}</option>
+                                            {{#if categories}}
+                                                {{#each categories }}
+                                                    <option value="{{this.id}}">{{this.name}}</option>
                                                 {{/each}}
                                             {{/if}}
 
