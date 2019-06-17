@@ -1,15 +1,24 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require("body-parser");
-var nguoidung = require('../models/nguoidung');
-
+var passport = require('passport');
+// var nguoidung = require('../models/nguoidung');
+var nguoi_dung_controller = require('../controllers/nguoidungController');
 /* GET home page. */
 router.use(bodyParser.json()); // support json encoded bodies
 router.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 router.get('/', function(req, res, next) {
-  res.render('dang-nhap', { layout: 'dang-nhap', title: 'DoubleT | Đăng nhập' });
+    res.render('dang-nhap', { layout: 'dang-nhap', title: 'DoubleT | Đăng nhập' });
 });
+
+// router.get('/dang-nhap',nguoi_dung_controller.index);
+//
+// router.post('/dang-nhap',
+//     passport.authenticate('local',{
+//       successRedirect: '/trang-chu',
+//       failureRedirect: '/'})
+// );
 
 router.get('/dang-nhap', function(req, res, next) {
   res.render('dang-nhap', { layout: 'dang-nhap', title: 'DoubleT | Đăng nhập' });
@@ -49,9 +58,9 @@ router.post('/dang-nhap',function(req, res, next){
   res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
 });
 
-router.get('/dang-ki', function(req, res, next) {
-  res.render('dang-ki', { layout: 'dang-ki', title: 'DoubleT | Đăng kí' });
-});
+// router.get('/dang-ki', function(req, res, next) {
+//   res.render('dang-ki', { layout: 'dang-ki', title: 'DoubleT | Đăng kí' });
+// });
 
 router.get('/trang-chu', function(req, res, next) {
   res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
@@ -63,10 +72,6 @@ router.get('/danh-sach-nguoi-dung', function(req, res, next) {
 
 router.get('/thong-tin-ca-nhan', function(req, res, next) {
   res.render('thong-tin-ca-nhan', { title: 'DoubleT | Thông tin cá nhân' });
-});
-
-router.get('/danh-sach-don-dat-hang', function(req, res, next) {
-  res.render('danh-sach-don-dat-hang', { title: 'DoubleT | Quản lý đơn đặt hàng' });
 });
 
 router.get('/thong-ke-doanh-so', function(req, res, next) {

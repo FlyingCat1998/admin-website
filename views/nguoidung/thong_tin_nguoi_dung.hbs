@@ -1,0 +1,142 @@
+
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content-wrapper">
+    <div class="content-wrapper container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title">
+
+                    <h4 class="float-left">Thông tin cá nhân của người dùng</h4>
+
+                    <ol class="breadcrumb float-left float-md-right">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);"><i class="fa fa-home"></i></a></li>
+                        <li class="breadcrumb-item">thong-tin-nguoi-dung </li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- end .page title-->
+        <form class="form-horizontal" method="post" action="">
+            {{#each user}}
+                <div class="row justify-content-around">
+                    <div class="col-md-4 margin-b-30">
+                        <div class="profile-overview">
+                            <div class="avtar text-center">
+                                <img src="{{this.url}}" alt="" class="img-thumbnail">
+                                <h3>{{this.name}}</h3>
+                                <div class="form-group row">
+                                    <label class="col-md-3 form-control-label" for="url">URL</label>
+                                    <td><input type="url" value="{{this.url}}" name="url" placeholder="Nhập URL của ảnh đại diện"></td>
+                                </div>
+                                <hr>
+                                <ul class="socials list-inline">
+                                    <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fa fa-github"></i></a></li>
+                                </ul>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 margin-b-30">
+                        <table class="table profile-detail table-sm table-hover">
+                            <thead>
+                            <tr>
+                                <th colspan="3">Thông tin liên hệ</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Họ tên</td>
+                                <td><input type="text" name="name" required="" value="{{this.name}}"></td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type="email" name="email" required="" value="{{this.email}}"></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại</td>
+                                <td><input type="tel" name="phonenumber" required=""  value="{{this.phonenumber}}"></td>
+                            </tr>
+                            <tr>
+                                <td>Địa chỉ</td>
+                                <td><input type="text" name="address" required=""  value="{{this.address}}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table profile-detail table-sm table-hover">
+                            <thead>
+                            <tr>
+                                <th colspan="3">Thông tin tài khoản</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Tài khoản</td>
+                                <td><td><input type="text" name="username" required="" value="{{this.username}}"></td></td>
+                            </tr>
+                            <tr>
+                                <td>Mật khẩu</td>
+                                <td><td><input type="password" name="password" required="" value="sssssssssssssssssssssssssssss"></td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="profile-states">
+                            <h3> Đóng góp cho cửa hàng</h3>
+                            <div class="sale-state-box">
+                                <h3>106</h3>
+                                <span>Sản phẩm</span>
+                            </div>
+                            <div class="sale-state-box">
+                                <h3>159,486,500VNĐ</h3>
+                                <span>Tổng giá trị sản phẩm</span>
+                            </div>
+                            <div class="sale-state-box">
+                                <h3>16 người</h3>
+                                <span>Đã chia sẻ trang cho</span>
+                            </div>
+                        </div>
+                        <div class="recent-activities">
+                            <h3>Các hoạt động gần đây</h3>
+                            <div class="media">
+                                <a class="d-flex mr-3" href="#">
+                                    <img class="media-object" src="/images/avatar-1.jpg" alt="...">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4 class="media-heading"> Giới thiệu sản phẩm</h4>
+                                    Cảm ơn, đây là sản phẩm rất tốt!
+                                </div>
+                            </div><!--media-->
+                            <div class="media">
+
+                                <a class="d-flex mr-3" href="#">
+                                    <img class="media-object" src="/images/avatar-2.jpg" alt="...">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4 class="media-heading"> Chia sẻ với bạn bè</h4>
+                                    Đây là website đáng tin cậy!
+                                </div>
+                            </div><!--media-->
+                            <div class="media">
+
+                                <a class="d-flex mr-3" href="#">
+                                    <img class="media-object" src="/images/avatar-3.jpg" alt="...">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4 class="media-heading"> Chia sẻ với người thân</h4>
+                                    Mọi người thấy ứng dụng này rất ổn định!
+                                </div>
+                            </div><!--media-->
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </form>
+    </div>
+    <!-- END CONTENT BODY -->

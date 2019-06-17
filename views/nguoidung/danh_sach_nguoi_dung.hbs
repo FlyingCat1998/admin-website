@@ -1,0 +1,61 @@
+<!-- BEGIN CONTENT BODY -->
+
+<div class="page-content-wrapper">
+    <div class="content-wrapper container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title">
+
+                    <h4 class="float-left">Danh sách người dùng </h4>
+
+                    <ol class="breadcrumb float-left float-md-right">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);"><i class="fa fa-home"></i></a></li>
+                        <li class="breadcrumb-item">danh-sach-nguoi-dung </li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- end .page title-->
+        <div class="row">
+            <div class="col-sm-12">
+                <form  method="post" enctype="multipart/form-data" id="form-product" class="">
+                    <div class="table-responsive">
+                        <table id="basic-datatables" class="table table-bordered table-hover" style="width:100%">
+                            <thead>
+                            <tr>
+                                <td class="text-center">Ảnh đại diện</td>
+                                <td class="text-left">Tên khách hàng</td>
+                                <td class="text-left"><i class="fa fa-map-marker"></i> Số điện thoại</td>
+                                <td class="text-left"><i class="fa fa-envelope-o"></i> Email</td>
+                                <td class="text-left">Username</td>
+                                <td class="text-left"><i class="fa fa-user"></i>  Profile</td>
+                                <td class="text-right">Khoá tài khoản</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each users}}
+                                <tr>
+                                    <td class="text-center"><a href="thong_tin_nguoi_dung/{{this.id}}"><img class="media-object rounded-circle sq100" src="{{this.url}}" alt="100x100" data-src="holder.js/100x100"></a></td>
+                                    <td class="text-left"><a href="thong_tin_nguoi_dung/{{this.id}}">{{this.name}}</a></td>
+                                    <td class="text-left">{{this.phonenumber}}</td>
+                                    <td class="text-left">{{this.email}}</td>
+                                    <td class="text-left">{{this.username}}<br></td>
+                                    <td class="text-right">
+                                        <a href="thong_tin_nguoi_dung/{{this.id}}" data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="Xem">
+                                            <i class="fa fa-user"></i>
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="chan_nguoi_dung/{{this.id}}" onclick="return confirm('Bạn có chắc là muốn chặn người dùng này?')" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="Chặn">
+                                            <i class="fa fa-user-times"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT BODY -->

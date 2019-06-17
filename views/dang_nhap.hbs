@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{{{title}}}</title>
+
+    <!-- WEB FONTS : use %7C instead of | (pipe) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/metis-menu/metisMenu.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/simple-line-icons-master/css/simple-line-icons.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/animate/animate.css" rel="stylesheet" type="text/css" />
+    <link href="/plugins/c3/c3.min.css" rel="stylesheet">
+    <link href="/plugins/widget/widget.css" rel="stylesheet">
+    <link href="/plugins/calendar/fullcalendar.min.css" rel="stylesheet">
+    <link href="/plugins/ui/jquery-ui.css" rel="stylesheet">
+
+    <!-- THEME CSS -->
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/theme/dark.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+</head>
+<body class="account">
+<div class="container">
+    <div class="row">
+        <div class="account-col text-center">
+            <h1>Double T</h1>
+            <h3>Đăng nhập vào tài khoản</h3>
+            <form class="m-t" role="form" action="dang-nhap" method="post">
+                <div class="form-group row">
+                    <input name="username" type="text" class="form-control" placeholder="Tên đăng nhập" required=""
+                           title="Hãy điền tên đăng nhập của bạn"
+                           oninvalid="this.setCustomValidity('Vui lòng điền tên đăng nhập của bạn')"
+                           oninput="setCustomValidity('')">
+                </div>
+                <div class="form-group row">
+                    <input name="password" type="password" class="form-control" placeholder="Mật khẩu" required="" title="Hãy điền mật khẩu của bạn"
+                           oninvalid="this.setCustomValidity('Vui lòng điền mật khẩu của bạn')"
+                           oninput="setCustomValidity('')">
+                </div>
+                <button type="submit" class="btn btn-primary btn-block ">Đăng nhập</button>
+                <a href="#">Quên mật khẩu?</a>
+                <p class=" text-center">Chưa có tài khoản?</p>
+                <a class="btn  btn-secondary btn-block" href="dang-ki">Tạo tài khoản</a>
+                <p>Double T's Admin Website</strong> 2019</p>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/plugins/bootstrap/js/tether.min.js"></script>
+<script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

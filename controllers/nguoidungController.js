@@ -1,21 +1,47 @@
-var Nguoidung = require('../models/nguoidung');
+var NguoiDung = require('../models/nguoidung');
 
-exports.nguoidung_create = function(req, res) {
-    res.send('NOT IMPLEMENTED: Nguoi dung create');
+// exports.index = async (req, res) => {
+//     res.render('dang_nhap', {layout: 'dang_nhap', title: 'DoubleT | Đăng nhập'});
+// };
+//
+// exports.dangxuat = async (req, res) => {
+//     req.logout();
+//     res.redirect('/');
+// };
+
+exports.danh_sach_nguoi_dung = async (req, res, next) => {
+    await NguoiDung.user_account_new_list(function (users) {
+        res.render('nguoidung/danh_sach_nguoi_dung', {title: 'Danh sách người dùng', users});
+    });
 };
 
-exports.nguoidung_update = function(req, res) {
-    res.send('NOT IMPLEMENTED: Nguoi dung update');
+exports.thong_tin_ca_nhan = async (req, res, next) => {
+    await NguoiDung.find_admin_account(1,function (adminUser) {
+        res.render('nguoidung/thong_tin_ca_nhan', { title: 'Thông tin cá nhân', adminUser});
+    });
 };
 
-exports.nguoidung_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: Nguoi dung list');
+exports.thong_tin_ca_nhan_post = async (req, res, next) => {
+    await NguoiDung.update_admin_account(1, req.body);
+
+    // res.render('nguoidung/thong_tin_ca_nhan', { title: 'Thông tin cá nhân', adminUser});
+    let abc = 1;
+    res.redirect('/nguoidung/thong_tin_ca_nhan', abc);
 };
 
-exports.nguoidung_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Nguoi dung detail: ' + req.params.id);
+exports.thong_tin_nguoi_dung = async (req, res, next) => {
+    await NguoiDung.find_user_account(req.params.id, function(user) {
+        res.render('nguoidung/thong_tin_nguoi_dung', { title: 'Thông tin người dùng', user});
+    });
 };
-
-exports.nguoidung_delete = function(req, res) {
-    res.send('NOT IMPLEMENTED: Nguoi dung delete');
-};
+// exports.nguoidung_list = function(req, res) {
+//     res.send('NOT IMPLEMENTED: Nguoi dung list');
+// };
+//
+// exports.nguoidung_detail = function(req, res) {
+//     res.send('NOT IMPLEMENTED: Nguoi dung detail: ' + req.params.id);
+// };
+//
+// exports.nguoidung_delete = function(req, res) {
+//     res.send('NOT IMPLEMENTED: Nguoi dung delete');
+// };
