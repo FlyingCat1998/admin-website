@@ -1,9 +1,9 @@
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: 'mysql-2972-0.cloudclusters.net',
+    user: 'test',
+    password: '123456',
     database: 'qlgamedb'
 });
 
