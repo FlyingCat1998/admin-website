@@ -1,16 +1,23 @@
 let Games = require('../models/game');
+let TheLoai = require('../models/theloai');
 
 exports.danh_sach_san_pham = async (req, res, next) => {
-    let games = await Games.list;
+    // let games = await Games.list;
+    //
+    // res.render('game/danh_sach_san_pham', { title: 'Danh sách sản phẩm', games });
 
-    res.render('game/danh_sach_san_pham', { title: 'Danh sách sản phẩm', games });
+    await Games.newList(function (games) {
+        res.render('game/danh_sach_san_pham', { title: 'Danh sách sản phẩm', games });
+    })
 };
 
 exports.them_san_pham = async (req, res, next) => {
-    let category = await Games.CategoryList;
+    let publisher = await Games.PublisherList;
 
     // thong bao them thanh cong
-    res.render('game/them_san_pham', { title: 'Thêm sản phẩm', category });
+    await TheLoai.newList(function (category) {
+        res.render('game/them_san_pham', { title: 'Thêm sản phẩm', category, publisher});
+    });
 };
 
 exports.them_san_pham_post = async (req, res, next) => {
@@ -21,10 +28,10 @@ exports.them_san_pham_post = async (req, res, next) => {
 
 exports.chinh_sua_san_pham = async (req, res, next) => {
     let categories = await Games.CategoryList;
+    let publishers = await Games.PublisherList;
 
     await Games.find(req.params.id, function(result) {
         let selectedCategory = "";
-
         for (let i = 0; i <  Games.CategoryList.length; i++)
         {
             if ( categories[i].id == result[0].cid)
@@ -33,7 +40,17 @@ exports.chinh_sua_san_pham = async (req, res, next) => {
             }
         }
 
-        res.render('game/chinh_sua_san_pham', { title: 'Chỉnh sửa sản phẩm', result, categories, selectedCategory});
+        let selectedPublisher = "";
+
+        for (let j = 0; j <  Games.PublisherList.length; j++)
+        {
+            if ( publishers[j].pbid == result[0].pbid)
+            {
+                selectedPublisher = publishers[j].name;
+            }
+        }
+
+        res.render('game/chinh_sua_san_pham', { title: 'Chỉnh sửa sản phẩm', result, categories, selectedCategory, publishers, selectedPublisher});
     });
 };
 

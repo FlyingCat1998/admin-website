@@ -8,7 +8,7 @@ var game_controller = require('../controllers/gameController');
 router.get('/danh_sach_san_pham', game_controller.danh_sach_san_pham);
 
 // GET,POST request to create Game.
-router.get('/them_san_pham/', game_controller.them_san_pham);
+router.get('/them_san_pham', game_controller.them_san_pham);
 router.post('/them_san_pham', game_controller.them_san_pham_post);
 
 // GET,POST request to update Game.

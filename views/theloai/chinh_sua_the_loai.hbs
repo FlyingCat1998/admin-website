@@ -1,0 +1,45 @@
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content-wrapper">
+    <div class="content-wrapper container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title">
+
+                    <h4 class="float-left">Chỉnh sửa thể loại </h4>
+
+                    <ol class="breadcrumb float-left float-md-right">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);"><i class="fa fa-home"></i></a></li>
+                        <li class="breadcrumb-item">chinh-sua-the-loai  </li>
+                    </ol>
+
+                </div>
+            </div>
+        </div><!-- end .page title-->
+
+        <form class="form-horizontal" method="post" action="chinh_sua_the_loai">
+            <div class="row justify-content-center">
+                <div class="col-md-6 margin-b-10">
+                    <div class="profile-edit">
+                        <fieldset>
+                            <div class="form-group row">
+                                <label class="col-md-3 form-control-label" for="Name">Tên thể loại</label>
+                                <div class="col-md-8">
+                                    {{#each category}}
+                                    <input type="text" class="form-control" id="Name" name="Name" value="{{this.name}}">
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="panel-footer">
+                            <div class="row justify-content-end">
+                                <div class="col-md-5 col-md-offset-3">
+                                    <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- END CONTENT BODY -->

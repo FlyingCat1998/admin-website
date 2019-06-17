@@ -23,44 +23,41 @@
                         <div class="profile-overview">
                             <div class="avtar text-center">
 
-                                <div id="fileZone" class="dropzone hasImportTools dz-clickable">
-                                    <div class="dz-message">
+                                <div id="fileZone" >
+                                    <div class="dz-message row justify-content-center">
                                         <div class="note text-white">space</div>
                                         <div class="note">Thêm một hình nhỏ về game</div>
                                         <!--                                <button class="btn btn-white">Chọn tệp</button>-->
                                         <div class="col-md-8">
-                                            <input type="text" class="form-control" id="Url" name="Url" value="{{this.avatar}}">
+                                            <a><img src={{this.avatar}} class="img-thumbnail"></a>
+                                            <input type="url" class="form-control" id="Url" name="Url"  placeholder="Nhập URL của hình đại diện cho game" value="{{this.avatar}}">
                                         </div>
-                                    </div>
-                                    <div class="importTools">
-
-
                                     </div>
                                 </div>
                                 <hr>
                             </div>
                             <div>
-                                <h4 class="mb-xlg">Một số hình minh hoạ về game</h4>
+                                <h4 class="mb-xlg">Một số hình minh hoạ khác về game</h4>
                                 <fieldset>
                                     <div class="form-group row">
-                                        <label class="col-md-3 form-control-label">Hình 1</label>
+                                        <label class="col-md-3 form-control-label" for="Url1">Hình 1</label>
                                         <div class="col-md-8">
-                                            <!--                                    <button clas s="btn btn-white">Chọn tệp</button>-->
-                                            <input type="text" class="form-control" id="Url1" name="Url1" value="{{this.imgurl1}}">
+                                            <a><img src={{this.imgurl1}} class="img-thumbnail"></a>
+                                            <input type="url" class="form-control" id="Url1" name="Url1" value="{{this.imgurl1}}" placeholder="Nhập URL của hình 1">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 form-control-label">Hình 2</label>
+                                        <label class="col-md-3 form-control-label" for="Url2">Hình 2</label>
                                         <div class="col-md-8">
-                                            <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
-                                            <input type="text" class="form-control" id="Url2" name="Url2" value="{{this.imgurl2}}">
+                                            <a><img src={{this.imgurl2}} class="img-thumbnail"></a>
+                                            <input type="url" class="form-control" id="Url2" name="Url2" value="{{this.imgurl2}}" placeholder="Nhập URL của hình 2">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-3 form-control-label">Hình 3</label>
+                                        <label class="col-md-3 form-control-label" for="Url3">Hình 3</label>
                                         <div class="col-md-8">
-                                            <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
-                                            <input type="text" class="form-control" id="Url3" name="Url3" value="{{this.imgurl3}}">
+                                            <a><img src={{this.imgurl3}} class="img-thumbnail"></a>
+                                            <input type="url" class="form-control" id="Url3" name="Url3" value="{{this.imgurl3}}" placeholder="Nhập URL của hình 3">
                                         </div>
                                     </div>
                                 </fieldset>
@@ -83,7 +80,6 @@
                                     <div class="col-md-8">
                                         <select id="Genre" name="Genre" class="form-control">
 
-
                                             <option value="{{this.cid}}" hidden="hidden" selected="selected">{{/each}}{{selectedCategory}}</option>
                                             {{#if categories}}
                                                 {{#each categories }}
@@ -104,7 +100,16 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="Publisher">Nhà phát hành</label>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" id="Publisher" name="Publisher" value="{{this.publisher}}">
+                                        <select id="Publisher" name="Publisher" class="form-control">
+
+                                        <option value="{{this.pbid}}" hidden="hidden" selected="selected">{{/each}}{{selectedPublisher}}</option>
+                                            {{#if publishers}}
+                                                {{#each publishers }}
+                                                    <option value="{{this.pbid}}">{{this.name}}</option>
+                                                {{/each}}
+                                            {{/if}}
+                                         {{#each result}}
+                                        </select>
                                     </div>
                                 </div>
                             </fieldset>
@@ -114,13 +119,13 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="Price">Giá cả</label>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" id="Price" name="Price" value="{{this.price}}">
+                                        <input type="number" class="form-control" id="Price" name="Price" value="{{this.price}}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="Quantity">Số lượng</label>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" id="Quantity" name="Quantity" value="{{this.quantity}}">
+                                        <input type="number" class="form-control" id="Quantity" name="Quantity" value="{{this.quantity}}">
                                     </div>
                                 </div>
                                 <div class="form-group row">
@@ -164,7 +169,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label" for="Description">Mô tả về game</label>
                                     <div class="col-md-12">
-                                        <textarea id="Description" name="Description" class="form-control" rows="4" >{{this.description}}</textarea>
+                                        <textarea id="Description" name="Description" class="form-control" rows="6" >{{this.description}}</textarea>
                                     </div>
                                 </div>
                             </fieldset>

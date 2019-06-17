@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 // var donHangRouter = require('./routes/donhang');
 var gameRouter = require('./routes/game');
 // var nguoiDungRouter = require('./routes/nguoidung');
-// var theLoaiRouter = require('./routes/theloai');
+var theLoaiRouter = require('./routes/theloai');
 
 var app = express();
 
@@ -29,7 +29,7 @@ app.use('/users', usersRouter);
 // app.use('/donhang', donHangRouter);
 app.use('/game', gameRouter);
 // app.use('/nguoidung', nguoiDungRouter);
-// app.use('/theloai', theLoaiRouter);
+app.use('/theloai', theLoaiRouter);
 
 app.use(session({
   cookie: { maxAge: 60000 },
@@ -68,5 +68,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

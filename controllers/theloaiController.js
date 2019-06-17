@@ -1,21 +1,41 @@
-var Theloai = require('../models/theloai');
+let TheLoai = require('../models/theloai');
 
-exports.theloai_create = function(req, res) {
-    res.send('NOT IMPLEMENTED: The loai create');
+exports.danh_sach_the_loai = async (req, res, next) => {
+    // let categories = await TheLoai.nlist;
+    //
+    // res.render('theloai/danh_sach_the_loai', { title: 'Danh sách thể loại', categories });
+
+    await TheLoai.newList(function (categories) {
+        res.render('theloai/danh_sach_the_loai', { title: 'Danh sách thể loại', categories });
+    })
 };
 
-exports.theloai_update = function(req, res) {
-    res.send('NOT IMPLEMENTED: The loai update');
+exports.them_the_loai = async (req, res, next) => {
+    // thong bao them thanh cong
+    res.render('theloai/them_the_loai', { title: 'Thêm thể loại' });
 };
 
-exports.theloai_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: The loai list');
+exports.them_the_loai_post = async (req, res, next) => {
+    await TheLoai.add(req.body);
+
+    res.redirect('./danh_sach_the_loai');
 };
 
-exports.theloai_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: The loai detail: ' + req.params.id);
+exports.chinh_sua_the_loai = async (req, res, next) => {
+    await TheLoai.find(req.params.id, function(category) {
+        res.render('theloai/chinh_sua_the_loai', { title: 'Chỉnh sửa thể loại', category});
+    });
 };
 
-exports.theloai_delete = function(req, res) {
-    res.send('NOT IMPLEMENTED: The loai delete');
+exports.chinh_sua_the_loai_post = async (req, res, next) => {
+    await TheLoai.update(req.params.id, req.body);
+
+    // thong bao cap nhat thanh cong
+    res.redirect('/theloai/danh_sach_the_loai');
+};
+
+exports.xoa_the_loai = async (req, res, next) => {
+    await TheLoai.delete(req.params.id);
+
+    res.redirect('/theloai/danh_sach_the_loai');
 };

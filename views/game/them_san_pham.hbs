@@ -23,17 +23,13 @@
                         <div class="avtar text-center">
 
                             <div id="fileZone" class="dropzone hasImportTools dz-clickable">
-                                <div class="dz-message">
+                                <div class="dz-message row justify-content-center">
                                     <div class="note text-white">space</div>
                                     <div class="note">Thêm một hình nhỏ về game</div>
                                     <!--                                <button class="btn btn-white">Chọn tệp</button>-->
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control" id="Url" name="Url">
+                                    <div class="col-md-10">
+                                        <input type="url" class="form-control" id="Url" name="Url" placeholder="Nhập URL của hình đại diện cho game">
                                     </div>
-                                </div>
-                                <div class="importTools">
-
-
                                 </div>
                             </div>
                             <hr>
@@ -45,21 +41,21 @@
                                     <label class="col-md-3 form-control-label">Hình 1</label>
                                     <div class="col-md-8">
                                         <!--                                    <button clas s="btn btn-white">Chọn tệp</button>-->
-                                        <input type="text" class="form-control" id="Url1" name="Url1">
+                                        <input type="url" class="form-control" id="Url1" name="Url1" placeholder="Nhập URL của hình 1">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label">Hình 2</label>
                                     <div class="col-md-8">
                                         <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
-                                        <input type="text" class="form-control" id="Url2" name="Url2">
+                                        <input type="url" class="form-control" id="Url2" name="Url2" placeholder="Nhập URL của hình 2">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 form-control-label">Hình 3</label>
                                     <div class="col-md-8">
                                         <!--                                    <button class="btn btn-white">Chọn tệp</button>-->
-                                        <input type="text" class="form-control" id="Url3" name="Url3">
+                                        <input type="url" class="form-control" id="Url3" name="Url3" placeholder="Nhập URL của hình 3">
                                     </div>
                                 </div>
                             </fieldset>
@@ -96,7 +92,11 @@
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Publisher">Nhà phát hành</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Publisher" name="Publisher">
+                                    <select id="Publisher" name="Publisher" class="form-control">
+                                        {{#each publisher }}
+                                            <option value="{{this.pbid}}" {{#selected}}selected="selected"{{/selected}}>{{this.name}}</option>
+                                        {{/each}}
+                                    </select>
                                 </div>
                             </div>
                         </fieldset>
@@ -106,13 +106,13 @@
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Price">Giá cả</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Price" name="Price">
+                                    <input type="number" class="form-control" id="Price" name="Price">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label" for="Quantity">Số lượng</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="Quantity" name="Quantity">
+                                    <input type="number" class="form-control" id="Quantity" name="Quantity">
                                 </div>
                             </div>
                             <div class="form-group row">
