@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52a0a18c-ffff-4697-9ea1-79d7183f7877" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/donhang/donhang_delete.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/donhang/donhang_detail.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/game/game_delete.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/game/game_detail.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/nguoidung/nguoidung_create.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/nguoidung/nguoidung_delete.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theloai/theloai_edit.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/theloai/theloai_list.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dbs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/nguoidung.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/nguoidung.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,10 +18,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/game/danh_sach_san_pham.hbs">
+        <entry file="file://$PROJECT_DIR$/models/donhang.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="34" column="68" lean-forward="true" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package-lock.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="429" column="10" selection-start-line="429" selection-start-column="5" selection-end-line="429" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/game.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-476">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/theloai.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-465">
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dbs/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -36,25 +84,16 @@
         <entry file="file://$PROJECT_DIR$/controllers/nguoidungController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/nguoidung/thong_tin_ca_nhan.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-918">
-              <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/nguoidung.js">
+        <entry file="file://$PROJECT_DIR$/models/nguoidung.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="833">
+              <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -70,7 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>href</find>
       <find>get</find>
       <find>3000</find>
       <find>?</find>
@@ -100,6 +138,7 @@
       <find>dang_xuat</find>
       <find>trang</find>
       <find>texta</find>
+      <find>mysql</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,7 +160,6 @@
         <option value="$PROJECT_DIR$/views/dang-ki.hbs" />
         <option value="$PROJECT_DIR$/views/dang-nhap.hbs" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/dbs/index.js" />
         <option value="$PROJECT_DIR$/routes/game.js" />
         <option value="$PROJECT_DIR$/views/theloai/theloai_list.hbs" />
         <option value="$PROJECT_DIR$/views/theloai/danh_sach_the_loai.hbs" />
@@ -129,15 +167,12 @@
         <option value="$PROJECT_DIR$/views/theloai/theloai_edit.hbs" />
         <option value="$PROJECT_DIR$/views/game/game_delete.hbs" />
         <option value="$PROJECT_DIR$/views/game/game_detail.hbs" />
-        <option value="$PROJECT_DIR$/models/theloai.js" />
-        <option value="$PROJECT_DIR$/models/game.js" />
         <option value="$PROJECT_DIR$/routes/theloai.js" />
         <option value="$PROJECT_DIR$/routes/donhang.js" />
         <option value="$PROJECT_DIR$/views/game/danh_sach_san_pham.hbs" />
         <option value="$PROJECT_DIR$/controllers/theloaiController.js" />
         <option value="$PROJECT_DIR$/views/donhang/donhang_delete.hbs" />
         <option value="$PROJECT_DIR$/controllers/gameController.js" />
-        <option value="$PROJECT_DIR$/models/donhang.js" />
         <option value="$PROJECT_DIR$/views/donhang/danh_sach_don_hang.hbs" />
         <option value="$PROJECT_DIR$/views/theloai/them_the_loai.hbs" />
         <option value="$PROJECT_DIR$/views/game/them_san_pham.hbs" />
@@ -149,16 +184,20 @@
         <option value="$PROJECT_DIR$/views/nguoidung/dang_nhap.hbs" />
         <option value="$PROJECT_DIR$/views/donhang/donhang_detail.hbs" />
         <option value="$PROJECT_DIR$/views/dang_nhap.hbs" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/404.hbs" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/layout.hbs" />
         <option value="$PROJECT_DIR$/views/nguoidung/danh_sach_nguoi_dung.hbs" />
-        <option value="$PROJECT_DIR$/models/nguoidung.js" />
         <option value="$PROJECT_DIR$/routes/nguoidung.js" />
         <option value="$PROJECT_DIR$/views/nguoidung/thong_tin_nguoi_dung.hbs" />
         <option value="$PROJECT_DIR$/controllers/nguoidungController.js" />
         <option value="$PROJECT_DIR$/views/nguoidung/thong_tin_ca_nhan.hbs" />
+        <option value="$PROJECT_DIR$/models/donhang.js" />
+        <option value="$PROJECT_DIR$/models/game.js" />
+        <option value="$PROJECT_DIR$/models/theloai.js" />
+        <option value="$PROJECT_DIR$/models/nguoidung.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/dbs/index.js" />
       </list>
     </option>
   </component>
@@ -184,7 +223,7 @@
             <path>
               <item name="admin-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="admin-website" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="dbs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="admin-website" type="b2602c69:ProjectViewProjectNode" />
@@ -195,23 +234,6 @@
               <item name="admin-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="admin-website" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="admin-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="admin-website" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="admin-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="admin-website" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="admin-website" type="b2602c69:ProjectViewProjectNode" />
-              <item name="admin-website" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="nguoidung" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -294,12 +316,12 @@
       <workItem from="1560690681934" duration="16575000" />
       <workItem from="1560748153747" duration="17032000" />
       <workItem from="1560766748413" duration="5408000" />
-      <workItem from="1560776848404" duration="28880000" />
+      <workItem from="1560776848404" duration="33360000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164691000" />
+    <option name="totallyTimeSpent" value="169171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,6 +334,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="npm" order="1" sideWeight="0.502439" side_tool="true" weight="0.25" />
@@ -357,27 +380,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="408" column="1" lean-forward="true" selection-start-line="408" selection-start-column="1" selection-end-line="408" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/thong-ke-top-10.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/trang-chu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/theme/dark.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31" />
@@ -437,13 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/theloai.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" lean-forward="true" selection-end-line="50" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -512,9 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbs/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/theloai.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -536,13 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="63" column="136" selection-start-line="63" selection-start-column="136" selection-end-line="63" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/donhang.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="45" column="148" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="45" selection-end-column="148" />
         </state>
       </provider>
     </entry>
@@ -584,31 +569,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/404.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="14" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -661,20 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/nguoidung.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="52" column="60" lean-forward="true" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/nguoidungController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/nguoidung.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -684,15 +634,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/game/danh_sach_san_pham.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="487">
           <caret line="34" column="68" lean-forward="true" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/nguoidung/thong_tin_ca_nhan.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
+        <state relative-caret-position="-969">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mysql/lib/Connection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/nguoidungController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/donhang.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="429" column="10" selection-start-line="429" selection-start-column="5" selection-end-line="429" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/nguoidung.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/theloai.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-465">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbs/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

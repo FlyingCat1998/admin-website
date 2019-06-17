@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require("body-parser");
 var passport = require('passport');
-// var nguoidung = require('../models/nguoidung');
+var nguoidung = require('../models/nguoidung');
 var nguoi_dung_controller = require('../controllers/nguoidungController');
 /* GET home page. */
 router.use(bodyParser.json()); // support json encoded bodies
@@ -31,36 +31,32 @@ router.get('/dang-nhap', function(req, res, next) {
 // });
 
 router.post('/dang-nhap',function(req, res, next){
-  // const username = req.body.username;
-  // const password = req.body.password;
-  // let isAuthenticated = false;
-  //
-  // len = nguoidung.admin_account_list.length;
-  //
-  // for (let i = 0; i < len; i++) {
-  //   if (nguoidung.admin_account_list[i].username == username)
-  //   {
-  //     if (nguoidung.admin_account_list[i].password == password)
-  //     {
-  //       isAuthenticated = true;
-  //     }
-  //   }
-  // }
-  //
-  // if (isAuthenticated)
-  // {
-  //   res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
-  // }
-  // else
-  // {
-  //   res.redirect('/');
-  // }
+  const username = req.body.username;
+  const password = req.body.password;
+  let isAuthenticated = false;
+
+  if (nguoidung.admin_account_list[0].username == username)
+  {
+    if (nguoidung.admin_account_list[0].password == password)
+    {
+      isAuthenticated = true;
+    }
+  }
+
+  if (isAuthenticated)
+  {
+    res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
+  }
+  else
+  {
+    res.redirect('/');
+  }
   res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
 });
 
-// router.get('/dang-ki', function(req, res, next) {
-//   res.render('dang-ki', { layout: 'dang-ki', title: 'DoubleT | Đăng kí' });
-// });
+router.get('/dang-ki', function(req, res, next) {
+  res.render('dang-ki', { layout: 'dang-ki', title: 'DoubleT | Đăng kí' });
+});
 
 router.get('/trang-chu', function(req, res, next) {
   res.render('trang-chu', { title: 'DoubleT\'s Admin website' });
