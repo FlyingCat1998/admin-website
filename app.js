@@ -7,7 +7,7 @@ var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// var donHangRouter = require('./routes/donhang');
+var donHangRouter = require('./routes/donhang');
 var gameRouter = require('./routes/game');
 // var nguoiDungRouter = require('./routes/nguoidung');
 var theLoaiRouter = require('./routes/theloai');
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/donhang', donHangRouter);
+app.use('/donhang', donHangRouter);
 app.use('/game', gameRouter);
 // app.use('/nguoidung', nguoiDungRouter);
 app.use('/theloai', theLoaiRouter);

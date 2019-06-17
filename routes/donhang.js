@@ -1,32 +1,20 @@
 var express = require('express');
 var router = express.Router();
-
 var don_hang_controller = require('../controllers/donhangController');
 
-/// DON HANG ROUTES ///
+/// THE LOAI ROUTES ///
+// GET request for list of all Don Hang.
+router.get('/danh_sach_don_hang', don_hang_controller.danh_sach_don_hang);
 
-// GET request for creating DonHang. NOTE This must come before route for id (i.e. display DonHang).
-router.get('/donhang/create', don_hang_controller.donhang_create_get);
+// GET,POST request to create Don Hang
+router.get('/them_don_hang', don_hang_controller.them_don_hang);
+router.post('/them_don_hang', don_hang_controller.them_don_hang_post);
 
-// POST request for creating DonHang.
-router.post('/donhang/create', don_hang_controller.donhang_create_post);
+// GET,POST request to update Don Hang.
+router.get('/chinh_sua_don_hang/(:id)', don_hang_controller.chinh_sua_don_hang);
+router.post('/chinh_sua_don_hang/(:id)', don_hang_controller.chinh_sua_don_hang_post);
 
-// GET request to delete DonHang.
-router.get('/donhang/:id/delete', don_hang_controller.donhang_delete_get);
-
-// POST request to delete DonHang
-router.post('/donhang/:id/delete', don_hang_controller.donhang_delete_post);
-
-// GET request to update DonHang.
-router.get('/donhang/:id/update', don_hang_controller.donhang_update_get);
-
-// POST request to update DonHang.
-router.post('/donhang/:id/update', don_hang_controller.donhang_update_post);
-
-// GET request for one DonHang.
-router.get('/donhang/:id', don_hang_controller.donhang_detail);
-
-// GET request for list of all DonHang.
-router.get('/cacdonhang', don_hang_controller.donhang_list);
+// GET request to delete Don Hang
+router.get('/xoa_don_hang/(:id)', don_hang_controller.xoa_don_hang);
 
 module.exports = router;

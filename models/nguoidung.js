@@ -1,30 +1,20 @@
-const mysql = require('mysql');
+const connection = require('../dbs/index');
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'qlgamedb'
-});
-
-connection.connect(function(err) {
+connection.query('SELECT * FROM ADMIN_ACCOUNT', function (err, rows) {
     if (err) throw err;
 
-    connection.query('SELECT * FROM ADMIN_ACCOUNT', function (err, rows) {
-        if (err) throw err;
-
-        exports.admin_account_list = rows;
-    });
+    exports.admin_account_list = rows;
+});
 
     // connection.query('SELECT * FROM ADMIN_ACCOUNT WHERE ADMIN_ACCOUNT.USERNAME = "SC"  ' , function (err, result) {
     //     if (err) throw err;
     //     exports.admin_profile = result;
     // });
 
-    connection.query('SELECT * FROM USER_ACCOUNT', function (err, rows) {
-        if (err) throw err;
-        exports.user_account_list = rows;
-    });
+connection.query('SELECT * FROM USER_ACCOUNT', function (err, rows) {
+    if (err) throw err;
+    exports.user_account_list = rows;
+});
 
     // exports.login = async (req, res) => {
     //     var message = '';
@@ -55,5 +45,5 @@ connection.connect(function(err) {
     //         res.render('dang-nhap',{ layout: 'dang-nhap', message: message });
     //     }
     // }
-});
+// });
 

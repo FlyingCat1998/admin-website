@@ -1,0 +1,119 @@
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content-wrapper">
+    <div class="content-wrapper container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title">
+
+                    <h4 class="float-left">Chỉnh sửa đơn hàng </h4>
+
+                    <ol class="breadcrumb float-left float-md-right">
+                        <li class="breadcrumb-item"><a href="javascript: void(0);"><i class="fa fa-home"></i></a></li>
+                        <li class="breadcrumb-item">chinh-sua-don-hang  </li>
+                    </ol>
+
+                </div>
+            </div>
+        </div><!-- end .page title-->
+
+        <form class="form-horizontal" method="post" action="">
+            {{#each order}}
+            <div class="row justify-content-center">
+                <div class="col-md-8 margin-b-10">
+                    <div class="profile-edit">
+                        <h4 class="mb-xlg">Thông tin chung về đơn hàng</h4>
+                        <fieldset>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="customerName">Tên khách hàng</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="customerName" name="customerName" value="{{this.name}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="pid">Tên sản phẩm đã mua</label>
+                                <div class="col-md-8">
+                                    <select id="pid" name="pid" class="form-control">
+                                        <option value="{{this.pid}}" hidden="hidden" selected="selected">{{/each}}{{selectedGame}}</option>
+                                        {{#if games}}
+                                            {{#each games }}
+                                                <option value="{{this.pid}}">{{this.name}}</option>
+                                            {{/each}}
+                                        {{/if}}
+                                        {{#each order}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="phonenumber">Số điện thoại người nhận</label>
+                                <div class="col-md-8">
+                                    <input type="number" class="form-control" id="phonenumber" name="phonenumber" value="{{this.phonenumber}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="address">Địa chỉ người nhận</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="address" name="address" value="{{this.address}}">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <hr class="dotted tall">
+                        <fieldset>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="total">Tổng chi phí</label>
+                                <div class="col-md-8">
+                                    <input type="number" class="form-control" id="total" name="total" value="{{this.total}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="dateorder">Ngày đặt hàng</label>
+                                <div class="col-md-8">
+                                    <input type="date" class="form-control" id="dateorder" name="dateorder" value="{{this.orderdate}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="datedeliver">Ngày nhận hàng</label>
+                                <div class="col-md-8">
+                                    <input type="date" class="form-control" id="datedeliver" name="datedeliver" value="{{this.deliverdate}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="status">Tình trạng</label>
+                                <div class="col-md-6">
+                                    <div class="row justify-content-between funkyradio">
+                                        <div class="funkyradio-default">
+                                            <input type="radio" name="status" id="radio1" value="Chưa giao"/>
+                                            <label for="radio1">Chưa giao </label>
+                                        </div>
+                                        <div class="funkyradio-success">
+                                            <input type="radio" name="status" id="radio2" value="Đang giao"/>
+                                            <label for="radio2">Đang giao </label>
+                                        </div>
+                                        <div class="row funkyradio-info">
+                                            <input type="radio" name="status" id="radio3" value="Đã giao" checked/>
+                                            <label for="radio3">Đã giao </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-4 form-control-label" for="description">Chú thích thêm về đơn hàng</label>
+                                <div class="col-md-8">
+                                    <textarea id="description" name="description" class="form-control" rows="3">{{this.description}}</textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="panel-footer">
+                            <div class="row justify-content-end">
+                                <div class="col-md-5 col-md-offset-3">
+                                    <button type="submit" class="btn btn-primary">Chỉnh sửa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </form>
+    </div>
+    <!-- END CONTENT BODY -->
