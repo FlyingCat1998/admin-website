@@ -24,9 +24,8 @@ exports.thong_tin_ca_nhan = async (req, res, next) => {
 exports.thong_tin_ca_nhan_post = async (req, res, next) => {
     await NguoiDung.update_admin_account(1, req.body);
 
-    // res.render('nguoidung/thong_tin_ca_nhan', { title: 'Thông tin cá nhân', adminUser});
-    let abc = 1;
-    res.redirect('/nguoidung/thong_tin_ca_nhan', abc);
+    // res.render('nguoidung/thong_tin_ca_nhan', { title: 'Thông tin cá nhân', adminUser})
+    res.redirect('/nguoidung/thong_tin_ca_nhan');
 };
 
 exports.thong_tin_nguoi_dung = async (req, res, next) => {
